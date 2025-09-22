@@ -58,15 +58,8 @@ class Model(nn.Module):
         beta_xy = fit_ar_batch(x_lag, y_lag, self.n_heads)
         beta_yy = fit_ar_batch(y_lag, y_lag, self.n_heads)
 
-        trans = torch.nan_to_num(0.5 * torch.log(beta_xy / beta_yy), 1e-5) + torch.eye(N, device=x_enc.device).unsqueeze(0).repeat(B, 1, 1)
-        #print('trans', trans.shape)
-
-        #print('eye', torch.eye(N).unsqueeze(0).shape)
-        #tr = trans[0, :, :].detach().cpu()
-
-        #plt.figure(figsize=(8, 6))
-        #sns.heatmap(tr, annot=False, fmt=".2f", cmap="viridis", cbar=True)
-        #plt.savefig('./row_trans.png', dpi=300)
+        trans = torch.nan_to_num(0.5 * torch.log(beta_xy / beta_yy), 1e-5)
+        trans = torch.where (trans < 0., torch.tensor(0.), trans) + torch.eye(N, device=x_enc.device).unsqueeze(0).repeat(B, 1, 1)
 
         # Embedding
         # B L N -> B N E                (B L N -> B L E in the vanilla Transformer)
