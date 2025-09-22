@@ -37,12 +37,12 @@ We evaluate the ARCausal on challenging multivariate forecasting benchmarks (**g
 We appreciate the following GitHub repos a lot for their valuable code and efforts.
 - iTransformer (https://github.com/thuml/iTransformer)
 - Causal-TSF (https://github.com/AKAGB/Causal-TSF)
-- Mamba (https://github.com/state-spaces/mamba)
-- Crossformer (https://github.com/Thinklab-SJTU/Crossformer)
 - PatchTST (https://github.com/yuqinie98/PatchTST)
 - MSGNet (https://github.com/YoZhibo/MSGNet)
 - DLinear (https://github.com/ioannislivieris/DLinear)
 - TimeMixer (https://github.com/kwuking/TimeMixer)
+- Timer (https://github.com/thuml/Large-Time-Series-Model)
+- mLANet (https://github.com/jiangjihua8/mLANet)
 - Time-Series-Library (https://github.com/thuml/Time-Series-Library)
 
 This work was supported in part by  the Science and Technology Talents and Platform Plan: Technology Innovation Center of Yunnan Province for Digital Water Engineering under Grant 202305AK34003 and in part by the Yunnan Zhang Zongliang Scientist Studio under Grant 2021KXJGZS01.
