@@ -1,7 +1,8 @@
 import os
 import torch
 from model import Transformer, Informer, Reformer, Flowformer, Flashformer, \
-    iTransformer, iInformer, iReformer, iFlowformer, iFlashformer, CausalModel, ARCausal
+    iTransformer, iInformer, iReformer, iFlowformer, iFlashformer, CausalModel, \
+    Timer, mLANet, ARCausal
 
 
 class Exp_Basic(object):
@@ -19,6 +20,8 @@ class Exp_Basic(object):
             'iFlowformer': iFlowformer,
             'iFlashformer': iFlashformer,
             'CausalModel': CausalModel,
+            'Timer': Timer,
+            'mLANet': mLANet,
             'ARCausal': ARCausal,
         }
         self.device = self._acquire_device()
